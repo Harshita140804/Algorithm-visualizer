@@ -21,7 +21,7 @@ A premium, frontend-only interactive dashboard designed to visually animate fund
 1. **Linear Search:** Sequential step-by-step evaluation across the array pool.
 2. **Binary Search:** Divide-and-conquer strategy showcasing logarithmic pointer reductions on pre-sorted data.
 
-### 排序 📊 Sorting
+### 📊 Sorting
 1. **Bubble Sort:** Straightforward comparisons highlighting neighboring element swapping mechanics.
 2. **Merge Sort:** Advanced divide-and-conquer structural tracking designed with clean, transparent loop traces for easy visual understanding.
 
