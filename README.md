@@ -1,61 +1,99 @@
-#  Interactive Algorithm Visualizer
 
-A premium, frontend-only interactive dashboard designed to visually animate fundamental searching and sorting algorithms. Built using React and styled with a modern theme, this application uses declarative layout transitions to demonstrate the step-by-step logic of execution paths in real-time.
+# Interactive Algorithm Visualizer
 
----
+A simple React-based web application that helps users understand searching and sorting algorithms through animations.
 
-##  Features
+I built this project to make algorithms easier to understand by showing each step visually instead of only looking at code.
 
-- **Distinct Two-Column Architecture:** 
-  - **Searching Zone:** Features a dedicated user input field to specify a search target, enabling dynamic analysis of element indexing.
-  - **Sorting Zone:** Provides independent controls to isolate and execute sorting routines.
-- **Smooth Layout Transitions:** Uses **Framer Motion's layout properties** to execute physically fluid sideways sliding transitions when array indices shift or swap, moving away from jarring instant flashes.
-- **Color-Coded Status Feedback:** Visual states update reactively via component states (e.g., scanning, index rejection, element found/sorted updates).
-- **Zero-Backend Dependency:** Runs entirely client-side inside the web browser with optimized performance loops.
+## Features
 
----
+- Visualize searching and sorting algorithms
+- Search for an element using Linear Search
+- Search for an element using Binary Search
+- Visualize Bubble Sort
+- Visualize Merge Sort
+- Show different colors for different steps of the algorithm
+- Smooth animations while elements move or swap
+- Runs completely in the browser without a backend
 
-##  Algorithms Implemented
+## Algorithms
 
-###  Searching
-1. **Linear Search:** Sequential step-by-step evaluation across the array pool.
-2. **Binary Search:** Divide-and-conquer strategy showcasing logarithmic pointer reductions on pre-sorted data.
+### Searching
 
-###  Sorting
-1. **Bubble Sort:** Straightforward comparisons highlighting neighboring element swapping mechanics.
-2. **Merge Sort:** Advanced divide-and-conquer structural tracking designed with clean, transparent loop traces for easy visual understanding.
+- **Linear Search** - Checks elements one by one until the target is found.
+- **Binary Search** - Repeatedly divides a sorted array into smaller parts to find the target.
 
----
+### Sorting
 
-##  Tech Stack & Dependencies
+- **Bubble Sort** - Compares nearby elements and swaps them when needed.
+- **Merge Sort** - Divides the array into smaller parts and then combines them in sorted order.
 
-- **Framework:** React (Functional Components, Hooks)
-- **Animation:** Framer Motion (Layout Animations)
-- **Styling:** Vanilla CSS (Dark-themed layout dashboard controls)
+## Tech Stack
 
----
+- React.js
+- JavaScript
+- Framer Motion
+- CSS
 
-## 🚀 Local Installation & Setup
+## How It Works
 
-Follow these steps to run this application locally on your machine:
+The user selects an algorithm and starts the visualization.
 
-1. **Clone the repository:**
-   ```bash
-   git clone https://github.com
-   ```
+The application then shows the algorithm step by step using animations and different colors.
 
-2. **Navigate into the project directory:**
-   ```bash
-   cd algorithm-visualizer
-   ```
+For example:
 
-3. **Install the required dependencies:**
-   ```bash
-   npm install
-   ```
+```text
+Array
+  ↓
+Compare elements
+  ↓
+Show the current step
+  ↓
+Move / Swap elements
+  ↓
+Repeat
+  ↓
+Sorted / Found
+````
 
-4. **Launch the local development server:**
-   ```bash
-   npm run dev
-   ```
-   Open your browser and navigate to the local host URL provided in your terminal window.
+## Running the Project
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/Harshita140804/Algorithm-visualizer.git
+```
+
+### 2. Go to the project folder
+
+```bash
+cd algorithm-visualizer
+```
+
+### 3. Install dependencies
+
+```bash
+npm install
+```
+
+### 4. Start the application
+
+```bash
+npm run dev
+```
+
+Open the local URL shown in the terminal.
+
+## What I Learned
+
+This project helped me understand how searching and sorting algorithms work step by step.
+
+I also got practical experience with **React, React Hooks, JavaScript, Framer Motion, and CSS**, and learned how to connect algorithm logic with an interactive user interface.
+
+## Author
+
+**Harshita Arora**
+
+B.Tech Computer Science
+
