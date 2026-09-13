@@ -7,11 +7,7 @@ import {
   runBinarySearch,
 } from './utils/algorithms.js';
 
-// ============================================================
-// HELPER FUNCTION: creates a brand new random array of bars.
-// Each bar has a unique "id" (so Framer Motion can track it as
-// it moves) and a random "value" (its height/number).
-// ============================================================
+
 let nextUniqueId = 0;
 function createRandomArray(size) {
   let newArray = [];
@@ -24,25 +20,22 @@ function createRandomArray(size) {
 }
 
 function App() {
-  // ---------- STATE: the array of bars being visualized ----------
+
   const [array, setArray] = useState(() => createRandomArray(15));
 
-  // ---------- STATE: visual status of bars ----------
   const [comparingIndices, setComparingIndices] = useState([]);
   const [sortedIndices, setSortedIndices] = useState([]);
   const [eliminatedIndices, setEliminatedIndices] = useState([]);
   const [foundIndex, setFoundIndex] = useState(null);
 
-  // ---------- STATE: control panel settings ----------
+ 
   const [arraySize, setArraySize] = useState(15);
   const [speed, setSpeed] = useState(300);
   const [targetValue, setTargetValue] = useState('');
   const [isRunning, setIsRunning] = useState(false);
   const [statusMessage, setStatusMessage] = useState('Generate an array to get started!');
 
-  // ============================================================
-  // Resets all visual highlight states back to empty.
-  // ============================================================
+
   function clearHighlights() {
     setComparingIndices([]);
     setSortedIndices([]);
@@ -56,9 +49,7 @@ function App() {
     setStatusMessage('New array generated. Pick an algorithm to run!');
   }
 
-  // ============================================================
-  // SORTING HANDLERS
-  // ============================================================
+ 
   async function handleRunBubbleSort() {
     clearHighlights();
     setIsRunning(true);
@@ -81,9 +72,7 @@ function App() {
     setIsRunning(false);
   }
 
-  // ============================================================
-  // SEARCHING HANDLERS
-  // ============================================================
+ 
   async function handleRunLinearSearch() {
     if (targetValue === '') {
       setStatusMessage('Please enter a target number to search for.');
@@ -142,10 +131,7 @@ function App() {
     setIsRunning(false);
   }
 
-  // ============================================================
-  // Figures out which CSS class a bar should have, based on
-  // its current status.
-  // ============================================================
+  
   function getBarClassName(index) {
     if (foundIndex === index) {
       return 'bar bar-found';
@@ -162,9 +148,7 @@ function App() {
     return 'bar bar-default';
   }
 
-  // ============================================================
-  // THE VISUAL LAYOUT (JSX)
-  // ============================================================
+  
   return (
     <div className="app-container">
       <header className="app-header">
@@ -172,7 +156,7 @@ function App() {
         <p className="app-subtitle">Watch Linear Search, Binary Search, Bubble Sort & Merge Sort in action</p>
       </header>
 
-      {/* ---------- TOP UTILITY BAR: array size, speed, generate ---------- */}
+      
       <div className="glass-panel utility-bar">
         <div className="control-group">
           <label>Array Size: <span className="control-value">{arraySize}</span></label>
@@ -204,9 +188,9 @@ function App() {
         </button>
       </div>
 
-      {/* ---------- TWO-COLUMN DASHBOARD: Searching Zone + Sorting Zone ---------- */}
+      
       <div className="dashboard-grid">
-        {/* ----- LEFT COLUMN: SEARCHING ZONE ----- */}
+       
         <div className="glass-panel zone-panel searching-zone">
           <h2 className="zone-heading">
             <span className="zone-icon">🔍</span> Searching Zone
@@ -234,7 +218,7 @@ function App() {
           </div>
         </div>
 
-        {/* ----- RIGHT COLUMN: SORTING ZONE ----- */}
+        
         <div className="glass-panel zone-panel sorting-zone">
           <h2 className="zone-heading">
             <span className="zone-icon">📊</span> Sorting Zone
@@ -253,12 +237,10 @@ function App() {
         </div>
       </div>
 
-      {/* ---------- THE BARS ---------- */}
+      
       <div className="glass-panel bars-container">
         {array.map((bar, index) => (
-          // "layout" tells Framer Motion to smoothly slide this bar to its
-          // new position instead of teleporting. "key={bar.id}" (not index!)
-          // is what lets Framer Motion track each bar as it moves around.
+          
           <motion.div
             key={bar.id}
             layout
@@ -271,7 +253,7 @@ function App() {
         ))}
       </div>
 
-      {/* ---------- STATUS MESSAGE ---------- */}
+      
       <div className="glass-panel status-message">{statusMessage}</div>
     </div>
   );

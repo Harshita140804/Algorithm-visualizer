@@ -1,6 +1,4 @@
-/* ============================================================
-   BASIC PAGE SETUP
-   ============================================================ */
+
 * {
   box-sizing: border-box;
 }
@@ -8,7 +6,7 @@
 body {
   margin: 0;
   font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
-  /* Deep slate/blue background for a premium dashboard feel */
+  
   background: radial-gradient(circle at top, #1b2138 0%, #0d0f1a 70%);
   color: #e6e9f0;
   min-height: 100vh;
@@ -20,9 +18,7 @@ body {
   padding: 40px 24px 60px;
 }
 
-/* ============================================================
-   HEADER
-   ============================================================ */
+
 .app-header {
   text-align: center;
   margin-bottom: 32px;
@@ -43,10 +39,7 @@ body {
   font-size: 0.95rem;
 }
 
-/* ============================================================
-   GLASSMORPHISM PANEL (reused everywhere: utility bar, zones,
-   bars container, status message)
-   ============================================================ */
+
 .glass-panel {
   background: rgba(255, 255, 255, 0.045);
   border: 1px solid rgba(255, 255, 255, 0.08);
@@ -56,9 +49,7 @@ body {
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
 }
 
-/* ============================================================
-   UTILITY BAR (array size, speed, generate button)
-   ============================================================ */
+
 .utility-bar {
   display: flex;
   flex-wrap: wrap;
@@ -69,9 +60,7 @@ body {
   margin-bottom: 24px;
 }
 
-/* ============================================================
-   TWO-COLUMN DASHBOARD GRID
-   ============================================================ */
+
 .dashboard-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -117,7 +106,7 @@ body {
   flex-wrap: wrap;
 }
 
-/* Subtle color accents so each zone feels distinct */
+
 .searching-zone {
   border-top: 3px solid rgba(56, 189, 248, 0.6);
 }
@@ -126,9 +115,7 @@ body {
   border-top: 3px solid rgba(139, 92, 246, 0.6);
 }
 
-/* ============================================================
-   CONTROL GROUPS & INPUTS
-   ============================================================ */
+
 .control-group {
   display: flex;
   flex-direction: column;
@@ -174,9 +161,7 @@ input[type='range'] {
   accent-color: #8b5cf6;
 }
 
-/* ============================================================
-   BUTTONS
-   ============================================================ */
+
 .btn {
   border: none;
   border-radius: 10px;
@@ -215,9 +200,7 @@ input[type='range'] {
   border: 1px solid rgba(255, 255, 255, 0.12);
 }
 
-/* ============================================================
-   THE BAR CHART AREA
-   ============================================================ */
+
 .bars-container {
   height: 380px;
   display: flex;
@@ -229,7 +212,7 @@ input[type='range'] {
   overflow: hidden;
 }
 
-/* Each individual bar */
+
 .bar {
   width: 38px;
   border-radius: 8px 8px 3px 3px;
@@ -243,7 +226,7 @@ input[type='range'] {
   transition: background 0.3s ease, opacity 0.3s ease;
 }
 
-/* Rich gradient color states */
+
 .bar-default {
   background: linear-gradient(180deg, #6366f1, #38bdf8);
   box-shadow: 0 0 12px rgba(99, 102, 241, 0.35);
@@ -270,9 +253,7 @@ input[type='range'] {
   box-shadow: none;
 }
 
-/* ============================================================
-   STATUS MESSAGE BAR
-   ============================================================ */
+
 .status-message {
   padding: 14px 20px;
   font-size: 0.95rem;
