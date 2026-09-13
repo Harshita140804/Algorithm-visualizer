@@ -1,4 +1,4 @@
-# 📊 Interactive Algorithm Visualizer
+#  Interactive Algorithm Visualizer
 
 A premium, frontend-only interactive dashboard designed to visually animate fundamental searching and sorting algorithms. Built using React and styled with a modern theme, this application uses declarative layout transitions to demonstrate the step-by-step logic of execution paths in real-time.
 
